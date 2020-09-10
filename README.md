@@ -2,6 +2,10 @@
 
 著名的字体图标 [Font Awesome](https://fontawesome.com/) Pro版本的下载脚本。
 
+**事实上使用官方CDN也可以用，只是下载下来免得哪一天被屏蔽了就比较麻烦了**
+
+`https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css`
+
 Pro本身是付费的，请不要用于商业用途，下载仅供个人研究和学习使用。
 
 （不用英语是因为怕被举报2333）
