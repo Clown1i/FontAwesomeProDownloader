@@ -9,22 +9,23 @@ import os
 import asyncio
 
 # 下载路径
-PATH = "https://kit-pro.fontawesome.com/releases/v5.14.0"
+VERSION = '6.4.0'
+PATH = "https://site-assets.fontawesome.com/releases/v" + VERSION
 # 下载异步任务数量
 TASK_NUMBER = 100
 
 
 async def main():
-    if not os.path.exists("/css/pro.min.css"):
+    if not os.path.exists("/css/all.css"):
         if not os.path.exists("./css"):
             os.mkdir("./css")
         # 下载CSS文件
         print("CSS文件不存在，正在下载")
         async with aiohttp.ClientSession() as session:
-            await downloader(["/css/pro.min.css"], session)
+            await downloader(["/css/all.css"], session)
 
     # 分析CSS文件
-    with open("./css/pro.min.css") as f:
+    with open("./css/all.css") as f:
         css = f.read()
 
     if not os.path.exists("./webfonts"):
@@ -74,4 +75,4 @@ async def downloader(urls, session):
 
 
 if __name__ == '__main__':
-    asyncio.get_event_loop().run_until_complete(main())
+    asyncio.run(main())
